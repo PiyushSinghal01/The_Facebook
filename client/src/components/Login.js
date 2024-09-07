@@ -7,6 +7,7 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [accessToken, setAccessToken] = useState(null);
   const [userInfo, setUserInfo] = useState({}); 
+  const [sdkLoaded, setSdkLoaded] = useState(false);
 
   
     const handleLogout = () => {
@@ -19,7 +20,6 @@ const Login = () => {
 
 
     const fetchUserInfo = (accessToken) => {
-
       if(accessToken)
         {
           axios.get('https://the-facebook-backend.onrender.com//facebook/login', {
@@ -84,6 +84,7 @@ const Login = () => {
 
         // Call checkLoginState here after the SDK has loaded
         checkLoginState();
+        setSdkLoaded(true);
       };
 
       // Dynamically load the Facebook SDK script
@@ -103,7 +104,8 @@ const Login = () => {
       <div>
         <h1>Log-in page</h1>
         {
-          isLoggedIn ? 
+          sdkLoaded ? (
+            isLoggedIn ? 
           <>
             <div>
               <h1>Welcome, {userInfo.name}</h1>
@@ -126,6 +128,7 @@ const Login = () => {
               data-scope="public_profile,email,pages_show_list,pages_read_engagement"
             ></div>
           </>
+          ) : <p>Loading....</p>
         }
         <br />
         <br />
