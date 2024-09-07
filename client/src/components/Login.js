@@ -71,13 +71,10 @@ const Login = () => {
       }
     };
 
-    console.log(process.env.REACT_APP_FACEBOOK_APP_ID)
-
   useEffect(() => {
 
       // Load the Facebook SDK when the component mounts
       window.fbAsyncInit = function() {
-        console.log('SDK Loaded');
         window.FB.init({
           appId: process.env.REACT_APP_FACEBOOK_APP_ID,
           cookie: true,
