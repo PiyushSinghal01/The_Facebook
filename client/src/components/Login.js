@@ -75,6 +75,7 @@ const Login = () => {
 
       // Load the Facebook SDK when the component mounts
       window.fbAsyncInit = function() {
+        console.log('SDK Loaded');
         window.FB.init({
           appId: process.env.FACEBOOK_APP_ID,
           cookie: true,
