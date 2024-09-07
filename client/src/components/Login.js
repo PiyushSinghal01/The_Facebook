@@ -71,6 +71,8 @@ const Login = () => {
       }
     };
 
+    console.log(process.env.REACT_APP_FACEBOOK_APP_ID)
+
   useEffect(() => {
 
       // Load the Facebook SDK when the component mounts
