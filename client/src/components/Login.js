@@ -77,7 +77,7 @@ const Login = () => {
       window.fbAsyncInit = function() {
         console.log('SDK Loaded');
         window.FB.init({
-          appId: process.env.FACEBOOK_APP_ID,
+          appId: process.env.REACT_APP_FACEBOOK_APP_ID,
           cookie: true,
           xfbml: true,
           version: 'v20.0'
