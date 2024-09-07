@@ -22,7 +22,7 @@ const Login = () => {
 
       if(accessToken)
         {
-          axios.get('http://localhost:5000/facebook/login', {
+          axios.get('https://the-facebook-backend.onrender.com//facebook/login', {
             params: {
               accessToken: accessToken
             }
@@ -76,7 +76,7 @@ const Login = () => {
       // Load the Facebook SDK when the component mounts
       window.fbAsyncInit = function() {
         window.FB.init({
-          appId: '499259362709714',
+          appId: process.env.FACEBOOK_APP_ID,
           cookie: true,
           xfbml: true,
           version: 'v20.0'
