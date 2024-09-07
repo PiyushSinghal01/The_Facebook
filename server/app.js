@@ -16,7 +16,7 @@ app.use(cors());
 
 
 app.get("/", (req, res) => {
-    res.send("hey this is server side");
+    res.send("This is the Server Side of The Facebook");
 })
 
 
