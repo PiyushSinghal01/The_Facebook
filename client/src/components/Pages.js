@@ -19,7 +19,7 @@ const Pages = ({ access_token, id }) => {
 
     if(accessToken)
     {
-      axios.get('https://the-facebook-backend.onrender.com//facebook/pages', {
+      axios.get('https://the-facebook-backend.onrender.com/facebook/pages', {
         params: {
           accessToken: accessToken
         }

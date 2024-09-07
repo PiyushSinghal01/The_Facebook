@@ -22,7 +22,7 @@ const Login = () => {
     const fetchUserInfo = (accessToken) => {
       if(accessToken)
         {
-          axios.get('https://the-facebook-backend.onrender.com//facebook/login', {
+          axios.get('https://the-facebook-backend.onrender.com/facebook/login', {
             params: {
               accessToken: accessToken
             }

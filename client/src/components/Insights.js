@@ -41,7 +41,7 @@ const Insights = ({access_token, pageId}) => {
           // console.log(pageId);
 
 
-          axios.get('https://the-facebook-backend.onrender.com//facebook/insights',{ 
+          axios.get('https://the-facebook-backend.onrender.com/facebook/insights',{ 
             params: {
               pageId: pageId, 
               pageAccessToken: pageAccessToken,
